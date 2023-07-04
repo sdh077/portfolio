@@ -12,6 +12,13 @@ export default function Projects() {
             link: [{ link: 'https://github.com/sdh077/portfolio.git', type: 'git' }]
         },
         {
+            title: 'SveleteKit 스니펫',
+            term: '2023-04 ~',
+            content: 'SvelteKit 시작하기와 적용 기술들',
+            skill: 'SvelteKit',
+            link: [{ link: 'https://svelte-beta-six.vercel.app/', type: 'site' }, { link: 'https://github.com/sdh077/svelte', type: 'git' }]
+        },
+        {
             title: '피부타입 검사',
             term: '2017.07 ~ 2017.10',
             content: '피부타입검사페이지, 관리자페이지개발 ',
