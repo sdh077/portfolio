@@ -51,7 +51,7 @@ export default function Projects() {
         });
     }, [])
     return (
-        <section className="position-relative overflow-hidden">
+        <section className="position-relative overflow-hidden" id="project">
             {/*Background half*/}
             <div className="position-absolute start-0 top-0 w-100 h-50 bg-body-tertiary" />
             <div className="container position-relative py-9 py-lg-11">
@@ -74,7 +74,7 @@ export default function Projects() {
                     <div className="swiper-wrapper">
                         {/*Slider item*/}
                         {projects.map((project, project_id) => (
-                            <div className="swiper-slide">
+                            <div className="swiper-slide" key={project_id}>
                                 <div className="row">
                                     <div className="col-lg-12" key={project_id}>
                                         <div className="card rounded-block shadow-lg flex-md-row flex-column overflow-hidden border-0 bg-body">

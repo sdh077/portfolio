@@ -29,7 +29,7 @@ export default function Career() {
         }
     ]
     return (
-        <section className="position-relative overflow-hidden" id="expertise">
+        <section className="position-relative overflow-hidden" id="career">
             {/*content*/}
             <div className="container py-9 py-lg-12 position-relative">
                 <div className="row mb-7 mb-lg-9 align-items-center">
