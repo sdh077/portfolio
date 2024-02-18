@@ -29,7 +29,7 @@ export default function Home() {
                             />입니다
                         </h2>
                         <p className="mb-6 lead">
-                            4 YEAR'S FULL STACK DEVELOPER
+                            FULL STACK DEVELOPER
                         </p>
                     </div>
                 </div>

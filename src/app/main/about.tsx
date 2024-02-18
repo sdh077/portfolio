@@ -1,10 +1,10 @@
 export default function About() {
     const abouts = [{
         title: 'About me',
-        contents: ['한동대학교 졸업', 'Full Stack 개발자']
+        contents: ['WEB & APP Freelancer', 'Full Stack 개발자']
     }, {
         title: 'My Career',
-        contents: ['한동대학교 연구원 & 이츠엠 소속 1년', '플레이오토 2년', '히포티앤씨 재직중']
+        contents: ['한동대학교 연구원 & 이츠엠', '플레이오토', '히포티앤씨', '어반데이터랩']
     }, {
         title: 'My projects',
         contents: ['피부타입 검사 (16DROPS)', '자가진단 페이지(장덕한방병원)', '한동대 디자인학과 졸업과제 사이트']

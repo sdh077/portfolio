@@ -11,7 +11,7 @@ export default function Career() {
             ],
         },
         {
-            company: '한동대학교 연구원 & 이츠엠 소속 1년',
+            company: '한동대학교 연구원 & 이츠엠 소속',
             title: '포항포인트 멤버십 App 개발',
             skill: ['Node.js', 'Ionic2', 'Angular', 'oracle', 'AWS(EC2, RDS)'],
             jobs: [
@@ -62,8 +62,8 @@ export default function Career() {
                                     <div className="width-4x pt-1 bg-warning mb-4" />
                                     {/*List*/}
                                     <ul className="list-unstyled lh-lg mb-0">
-                                        {career.jobs.map((job, job_id) => (
-                                            <li className="my-2 d-flex align-items-center" key={job_id}>
+                                        {career.jobs.map((job, jobId) => (
+                                            <li className="my-2 d-flex align-items-center" key={jobId}>
                                                 <i className="bx bx-radio-circle me-3 text-warning" /> {job}
                                             </li>
 
@@ -74,8 +74,8 @@ export default function Career() {
                                         사용 기술
                                     </p>
                                     <ul className="list-unstyled lh-lg mb-0">
-                                        {career.skill.map((skill, skill_id) => (
-                                            <li className="my-2 d-flex align-items-center" key={skill_id}>
+                                        {career.skill.map((skill, skillId) => (
+                                            <li className="my-2 d-flex align-items-center" key={skillId}>
                                                 <i className="bx bx-radio-circle me-3 text-warning" /> {skill}
                                             </li>
 
