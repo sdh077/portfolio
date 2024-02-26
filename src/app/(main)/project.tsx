@@ -5,6 +5,13 @@ import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 export default function Projects() {
     const projects = [
         {
+            title: '그 사랑교회 홈페이지',
+            term: '2023-11 ~ 2023-12',
+            content: '소개 및 유튜브 영상 아카이브',
+            skill: 'Next.js, vercel',
+            link: [{ link: 'https://hisgreatlovechurch.com', type: 'site' }]
+        },
+        {
             title: '신대호의 포트폴리오',
             term: '2023-06 ~',
             content: '포트폴리오 및 이력서 사이트',

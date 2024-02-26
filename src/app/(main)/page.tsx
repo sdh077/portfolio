@@ -1,12 +1,12 @@
 import Spinner from '@components/spinner/spinner';
 import Header from '@components/layout/header';
-import Home from './main/home'
-import About from './main/about';
-import Career from './main/career';
+import Home from './home'
+import About from './about';
+import Career from './career';
 import Footer from '@components/layout/Footer';
-import Skills from './main/skill';
-import Contact from './main/contact';
-import Project from './main/project';
+import Skills from './skill';
+import Contact from './contact';
+import Project from './project';
 export default function Page() {
 
   return (
