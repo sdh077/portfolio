@@ -8,7 +8,7 @@ export default function ZoomComponent() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="zoom">
+        <div className="zoom cursor-pointer">
             <motion.div
                 layout
                 data-isopen={isOpen}

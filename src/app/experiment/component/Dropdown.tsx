@@ -1,6 +1,8 @@
+'use client'
 import "./dropdown.scss";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
+import { useRouter } from 'next/navigation'
 
 const itemVariants: Variants = {
     open: {
@@ -12,10 +14,12 @@ const itemVariants: Variants = {
 };
 
 export default function DropdownComponent({ items }: { items }) {
+    const router = useRouter()
+    const navItems = items.map(nav => ({
+        name: nav,
+        function: () => router.push(`/experiment/${nav}`)
+    }))
     const [isOpen, setIsOpen] = useState(false);
-    const choice = (num) => {
-        setIsOpen(false)
-    }
     return (
         <div className="dropdown">
             <motion.nav
@@ -64,8 +68,8 @@ export default function DropdownComponent({ items }: { items }) {
                     }}
                     style={{ pointerEvents: isOpen ? "auto" : "none" }}
                 >
-                    {items.map(item => (
-                        <motion.li variants={itemVariants} onClick={() => item.function()}>{item.name} </motion.li>
+                    {navItems.map(item => (
+                        <motion.li key={item.name} variants={itemVariants} onClick={() => item.function()}>{item.name} </motion.li>
                     ))}
                 </motion.ul>
             </motion.nav>

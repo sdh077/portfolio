@@ -1,5 +1,5 @@
 import Script from "next/script"
-
+import './globals.css'
 export const metadata = {
   title: '신대호',
   description: '폴트폴리오겸 이력서 사이트입니다.',
