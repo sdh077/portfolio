@@ -80,6 +80,7 @@ export const schedule = createSlice({
                     $push: temp,
                 })
             } else {
+                console.log(hoverIndex)
                 prevCards[dragDay].splice(hoverIndex, 0, ...temp);
             }
             state.items = prevCards
