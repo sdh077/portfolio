@@ -10,7 +10,7 @@ export default function Skills() {
             >
                 <div
                     className="mb-5 px-lg-11 text-center"
-                    data-aos="fade-up"
+
                     data-aos-delay={100}
                 >
                     {/*Heading*/}
@@ -20,7 +20,7 @@ export default function Skills() {
                     {skills.map((skill, i) => (
                         <div
                             className="d-flex align-items-center justify-content-center mt-5 width-14x px-4"
-                            data-aos="fade-up"
+
                             data-aos-delay={150 + i * 50}
                             key={i}
                         >

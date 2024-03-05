@@ -35,13 +35,13 @@ export default function Career() {
                 <div className="row mb-7 mb-lg-9 align-items-center">
                     <div className="col-lg-7">
                         {/*Subheading*/}
-                        <div className="mb-3" data-aos="fade-up">
+                        <div className="mb-3">
                             <span className="h6 text-body-secondary">What I do</span>
                         </div>
                         {/*Section Heading*/}
                         <h2
                             className="mb-0 display-5"
-                            data-aos="fade-up"
+
                             data-aos-delay={100}
                         >
                             Career
@@ -50,7 +50,7 @@ export default function Career() {
                 </div>
                 <div className="row justify-content-around">
                     {careers.map((career, i) => (
-                        <div className="col-md-4 mb-7 mb-md-0" data-aos="fade-up" key={i}>
+                        <div className="col-md-4 mb-7 mb-md-0" key={i}>
                             <div className="card h-100 card-body border-0 shadow py-5 hover-lift hover-shadow-lg overflow-hidden">
                                 <div className="position-relative z-1">
                                     {/*title*/}

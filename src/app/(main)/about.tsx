@@ -18,7 +18,7 @@ export default function About() {
                 <div className="row align-items-center justify-content-between">
                     <div className="order-last col-lg-5 me-lg-auto col-xl-4">
                         {/*Subheading*/}
-                        <div className="mb-3" data-aos="fade-up">
+                        <div className="mb-3">
                             <span className="h6 text-body-secondary">Who I Am</span>
                         </div>
                         {/*Section Heading*/}
@@ -32,7 +32,7 @@ export default function About() {
                             <div className="position-relative z-1" key={i}>
                                 <div
                                     className="mb-4 mb-lg-5"
-                                    data-aos="fade-up"
+
                                     data-aos-delay={150}
                                 >
                                     {/*Feature text*/}
