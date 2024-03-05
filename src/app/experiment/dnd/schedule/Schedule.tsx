@@ -47,7 +47,8 @@ const List = ({ day, cards }) => {
         [],
     )
     const moveCard = useCallback((dragDay: string, hoverDay: string, dragIndex: number, hoverIndex: number) => {
-        dispatch(moveItem({ dragDay, hoverDay, dragIndex, hoverIndex }))
+        if (dragDay !== hoverDay)
+            dispatch(moveItem({ dragDay, hoverDay, dragIndex, hoverIndex }))
     }, [])
     const [{ isOver }, drop] = useDrop(
         () => ({

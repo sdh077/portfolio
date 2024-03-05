@@ -4,6 +4,8 @@ import type { FC } from 'react'
 import { useRef } from 'react'
 import { useDrag, useDrop } from 'react-dnd'
 import { ItemTypes } from './Constraint'
+import { moveItem } from '@/redux/features/scheduleSlice'
+import { useDispatch } from 'react-redux'
 
 
 const style = {
@@ -31,6 +33,7 @@ export interface DragItem {
 
 export const Card: FC<CardProps> = ({ id, text, index, day, moveCard }) => {
     const ref = useRef<HTMLDivElement>(null)
+    const dispatch = useDispatch();
     const [{ handlerId }, drop] = useDrop<
         DragItem,
         void,
@@ -50,40 +53,10 @@ export const Card: FC<CardProps> = ({ id, text, index, day, moveCard }) => {
             const dragIndex = item.index
             const hoverIndex = index
 
-            // Don't replace items with themselves
-            if (dragIndex === hoverIndex) {
-                return
-            }
-
-            // Determine rectangle on screen
-            const hoverBoundingRect = ref.current?.getBoundingClientRect()
-
-            // Get vertical middle
-            const hoverMiddleY =
-                (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2
-
-            // Determine mouse position
-            const clientOffset = monitor.getClientOffset()
-
-            // Get pixels to the top
-            const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top
-
-            // Only perform the move when the mouse has crossed half of the items height
-            // When dragging downwards, only move when the cursor is below 50%
-            // When dragging upwards, only move when the cursor is above 50%
-
-            // Dragging downwards
-            if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-                return
-            }
-
-            // Dragging upwards
-            if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-                return
-            }
             // Time to actually perform the action
-            if (monitor.getItem().day === day)
-                moveCard(monitor.getItem().day, day, dragIndex, hoverIndex)
+            if (monitor.getItem().day === day) {
+                dispatch(moveItem({ dragDay: monitor.getItem().day, hoverDay: day, dragIndex, hoverIndex }))
+            }
 
             // Note: we're mutating the monitor item here!
             // Generally it's better to avoid mutations,
@@ -112,3 +85,4 @@ export const Card: FC<CardProps> = ({ id, text, index, day, moveCard }) => {
         </div>
     )
 }
+

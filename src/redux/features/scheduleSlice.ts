@@ -74,14 +74,18 @@ export const schedule = createSlice({
         moveItem: (state, action: PayloadAction<{ dragDay: string, hoverDay: string, dragIndex: number, hoverIndex: number }>) => {
             const { dragDay, hoverDay, dragIndex, hoverIndex } = action.payload;
             const prevCards = { ...state.items }
-            const temp = prevCards[dragDay].splice(dragIndex, 1)
             if (dragDay !== hoverDay) {
+                const temp = prevCards[dragDay].splice(dragIndex, 1)
                 prevCards[hoverDay] = update(prevCards[hoverDay], {
                     $push: temp,
                 })
             } else {
-                console.log(hoverIndex)
-                prevCards[dragDay].splice(hoverIndex, 0, ...temp);
+                prevCards[dragDay] = update(prevCards[dragDay], {
+                    $splice: [
+                        [dragIndex, 1],
+                        [hoverIndex, 0, prevCards[dragDay][dragIndex]]
+                    ]
+                })
             }
             state.items = prevCards
         },
