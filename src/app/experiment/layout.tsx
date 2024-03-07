@@ -4,7 +4,7 @@ import { Container } from '@components/Container'
 import './motion.css'
 
 export default function layout({ params: { id }, children }: { params: { id: string }, children: React.ReactNode }) {
-    const navs = ['motion', 'dnd', 'canvas', 'chat']
+    const navs = ['motion', 'dnd', 'chat']
     return (
         <>
             <Container className='mt-4'>
