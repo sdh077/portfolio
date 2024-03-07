@@ -87,7 +87,7 @@ export default function Header() {
                                     </a>
                                 </li>
                                 <li className="nav-item ms-lg-4">
-                                    <a className="nav-link" href="/experiment/motion">
+                                    <a className="nav-link text-success" href="/experiment/motion">
                                         Experiment
                                     </a>
                                 </li>
