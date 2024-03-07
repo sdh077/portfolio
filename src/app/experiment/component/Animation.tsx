@@ -10,7 +10,7 @@ export default function Animation() {
 
     useEffect(() => {
         const animation = async () => {
-            await animate(scope.current, { x: `${x - 50}%`, y: `${y}%`, rotate })
+            await animate(scope.current, { x: `${x - 25}%`, y: `${y}%`, rotate })
             animate("li", { opacity: 1 })
         }
 
@@ -19,7 +19,7 @@ export default function Animation() {
     return (
         <div className="animation">
             <div className="flex gap-2 justify-center">
-                <button onClick={() => setX(x => (x + 25) % 125)}>X</button>
+                <button onClick={() => setX(x => (x + 25) % 100)}>X</button>
                 <button onClick={() => setY(y => (y + 30) % 90)}>Y</button>
                 <button onClick={() => setRotate(r => (r + 30) % 360)}>R</button>
             </div>

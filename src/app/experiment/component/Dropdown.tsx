@@ -66,10 +66,12 @@ export default function DropdownComponent({ items }: { items }) {
                             }
                         }
                     }}
-                    style={{ pointerEvents: isOpen ? "auto" : "none" }}
+                    style={{
+                        pointerEvents: isOpen ? "auto" : "none", cursor: 'pointer'
+                    }}
                 >
                     {navItems.map(item => (
-                        <motion.li key={item.name} variants={itemVariants} onClick={() => item.function()}>{item.name} </motion.li>
+                        <motion.li key={item.name} variants={itemVariants} onClick={() => item.function()}>{item.name}</motion.li>
                     ))}
                 </motion.ul>
             </motion.nav>

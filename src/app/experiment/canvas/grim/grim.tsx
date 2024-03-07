@@ -31,6 +31,7 @@ export default function Grim() {
     }
   }
   const resize = () => {
+    if (!canvasGrim.current) return
     const pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
     const stageWidth = document.body.clientWidth;
     const stageHeight = document.body.clientHeight;

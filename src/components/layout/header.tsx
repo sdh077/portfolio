@@ -86,6 +86,11 @@ export default function Header() {
                                         Contact
                                     </a>
                                 </li>
+                                <li className="nav-item ms-lg-4">
+                                    <a className="nav-link" href="/experiment/motion">
+                                        Experiment
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>

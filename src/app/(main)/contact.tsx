@@ -14,7 +14,7 @@ export default function Contact() {
                             {/* Contacts Form */}
                             <form
                                 action={addContact}
-                                method="POST"
+                                method="post"
                                 role="form"
                                 className="needs-validation"
                             >
