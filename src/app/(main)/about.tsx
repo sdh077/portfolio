@@ -24,7 +24,7 @@ export default function About() {
                         {/*Section Heading*/}
                         <h2
                             className="mb-7 display-5 position-relative z-1"
-                            data-aos="fade-right"
+
                         >
                             프로그래머 신대호입니다.
                         </h2>
@@ -53,7 +53,6 @@ export default function About() {
                     <div className="col-lg-6 col-md-10 me-lg-auto order-1 mb-7 mb-lg-0">
                         <div
                             className="position-relative"
-                            data-aos="fade-left"
                             data-aos-delay={150}
                         >
                             {/*Transparent image background*/}
