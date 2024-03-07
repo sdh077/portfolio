@@ -4,7 +4,6 @@ export default function Skills() {
         <section className="position-relative bg-body-tertiary overflow-hidden" id="skill">
             <div
                 className="container px-lg-12 py-9 py-lg-12 position-relative z-1"
-                data-aos="fade"
                 data-aos-once="false"
                 data-aos-offset={120}
             >

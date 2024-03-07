@@ -10,7 +10,7 @@ import Project from './project';
 export default function Page() {
 
   return (
-    <>
+    <div >
       <Spinner />
       <Header />
       <main>
@@ -25,6 +25,6 @@ export default function Page() {
       <a href="#" className="toTop">
         <i className="bx bxs-up-arrow" />
       </a>
-    </>
+    </div>
   )
 }
