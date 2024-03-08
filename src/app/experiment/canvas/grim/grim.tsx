@@ -23,7 +23,6 @@ export default function Grim() {
       if (mouse.x === 0 && mouse.y === 0) return mouse = { x, y }
 
       ctx.strokeStyle = choiceColor
-      console.log(ctx.strokeStyle, choiceColor)
       ctx.lineWidth = 2.5
       ctx.lineJoin = 'round'
 
@@ -35,6 +34,11 @@ export default function Grim() {
       mouse = { x, y }
     }
   }
+  const handlePaint = (event: any, onOff: boolean) => {
+    mouse = { x: 0, y: 0 }
+    isPainting = onOff
+  }
+
   const resize = () => {
     if (!canvasGrim.current) return
     const pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
@@ -45,11 +49,6 @@ export default function Grim() {
 
     ctx.scale(pixelRatio, pixelRatio);
   }
-  const handlePaint = (event: any, onOff: boolean) => {
-    mouse = { x: 0, y: 0 }
-    isPainting = onOff
-  }
-
   useEffect(() => {
     if (!canvasGrim.current) return
     ctx = canvasGrim.current.getContext("2d");

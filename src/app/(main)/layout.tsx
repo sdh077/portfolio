@@ -6,7 +6,7 @@ import '@assets/vendor/node_modules/css/aos.css'
 import '@assets/fonts/iconsmind/iconsmind.css'
 import '@assets/vendor/masterslider/style/masterslider.css'
 import '@assets/vendor/masterslider/skins/black-1/style.css'
-import '@assets/css/theme-teal.css'
+import '@assets/css/theme.css'
 import Script from 'next/script'
 
 export const metadata = {
