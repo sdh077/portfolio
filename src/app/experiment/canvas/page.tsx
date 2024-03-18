@@ -9,7 +9,7 @@ export default function Canvas() {
     if (canvasBall.current) new BallComponent(canvasBall.current)
     return (
         <div>
-            <Raf />
+            {/* <Raf /> */}
             <Grim />
             <canvas className='bg-black' ref={canvasBall} />
         </div>

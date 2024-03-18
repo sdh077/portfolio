@@ -13,7 +13,8 @@ export function canMoveQueen(QueenPosition, toX, toY) {
 
     return (
         (Math.abs(dx) === 0 && Math.abs(dy) !== 0) ||
-        (Math.abs(dx) !== 0 && Math.abs(dy) === 0)
+        (Math.abs(dx) !== 0 && Math.abs(dy) === 0) ||
+        (Math.abs(dx) === Math.abs(dy))
     )
 }
 export default function Queen({ x, y }) {

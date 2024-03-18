@@ -13,7 +13,6 @@ export default function Grim() {
 
   const painting = (event) => {
     if (isPainting) {
-      ctx = canvasGrim.current.getContext("2d");
       event.preventDefault();   // drag 방지
       event.stopPropagation();  // drag 방지
 
@@ -37,6 +36,9 @@ export default function Grim() {
   const handlePaint = (event: any, onOff: boolean) => {
     mouse = { x: 0, y: 0 }
     isPainting = onOff
+  }
+  const clear = () => {
+    canvasGrim.current.getContext("2d").clearRect(0, 0, canvasGrim.current.width, canvasGrim.current.height)
   }
 
   const resize = () => {
@@ -77,6 +79,7 @@ export default function Grim() {
             <div key={color} onClick={() => setColor(color)} className={clsx(choiceColor === color ? 'border-4 border-slate-300' : '', "w-[48px] h-[48px] rounded-full shadow-xl bg-slate-50 cursor-pointer")} style={{ backgroundColor: color }}></div>
           )}
         </div>
+        <button onClick={() => clear()}>초기화</button>
       </div>
     </div>
   )
