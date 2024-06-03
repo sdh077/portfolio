@@ -11,7 +11,7 @@ export default function Career() {
             ],
         },
         {
-            company: '한동대학교 연구원 & 이츠엠 소속',
+            company: '대학교 연구원 & 이츠엠 소속',
             title: '포항포인트 멤버십 App 개발',
             skill: ['Node.js', 'Ionic2', 'Angular', 'oracle', 'AWS(EC2, RDS)'],
             jobs: [

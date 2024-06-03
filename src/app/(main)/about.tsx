@@ -4,7 +4,7 @@ export default function About() {
         contents: ['WEB & APP Freelancer', 'Full Stack 개발자']
     }, {
         title: 'My Career',
-        contents: ['한동대학교 연구원 & 이츠엠', '플레이오토', '히포티앤씨', '어반데이터랩']
+        contents: ['대학교 연구원 & 이츠엠', '플레이오토', '히포티앤씨', '어반데이터랩']
     }, {
         title: 'My projects',
         contents: ['피부타입 검사 (16DROPS)', '자가진단 페이지(장덕한방병원)', '한동대 디자인학과 졸업과제 사이트']
